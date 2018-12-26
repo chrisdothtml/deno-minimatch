@@ -1,6 +1,6 @@
 build:
 	yarn rollup -c
-	yarn terser --compress -- dist/index.js -o dist/index.js -b "beautify=false,preamble='//@ts-ignore'"
+	yarn terser --compress -- index.js -o index.js -b "beautify=false,preamble='//@ts-ignore'"
 
 tests:
 	deno index.test.js
