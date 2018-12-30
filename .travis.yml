@@ -10,4 +10,4 @@ install:
 - yarn install --ignore-engines
 
 script:
-- deno --version
+- yarn test

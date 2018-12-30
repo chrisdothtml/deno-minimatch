@@ -5,7 +5,11 @@
     "yarn": ">=1.12"
   },
   "scripts": {
-    "lint": "standard --verbose | snazzy"
+    "build:bundle": "rollup -c",
+    "build:ts-fix": "terser --compress -- index.js -o index.js -b \"beautify=false,preamble='//@ts-ignore'\"",
+    "build": "yarn build:bundle && yarn build:ts-fix",
+    "lint": "standard --verbose | snazzy",
+    "test": "yarn lint && deno index.test.js"
   },
   "standard": {
     "ignore": [
