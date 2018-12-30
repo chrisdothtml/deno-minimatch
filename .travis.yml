@@ -1,8 +1,13 @@
-language: python
+language: node_js
+
+os:
+- linux
+- osx
 
 install:
 - curl -L https://deno.land/x/install/install.py | python - v0.2.3
 - export PATH="$HOME/.deno/bin:$PATH"
+- yarn install
 
 script:
-- make tests
+- deno --version
