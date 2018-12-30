@@ -31,12 +31,12 @@ array-unique@^0.2.1:
 
 balanced-match@^1.0.0:
   version "1.0.0"
-  resolved "https://unpm.uberinternal.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
+  resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
 brace-expansion@^1.1.7:
   version "1.1.11"
-  resolved "https://unpm.uberinternal.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
   integrity sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
   dependencies:
     balanced-match "^1.0.0"
@@ -53,7 +53,7 @@ braces@^1.8.2:
 
 buffer-from@^1.0.0:
   version "1.1.1"
-  resolved "https://unpm.uberinternal.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
+  resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
   integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
 
 builtin-modules@^3.0.0:
@@ -63,12 +63,12 @@ builtin-modules@^3.0.0:
 
 commander@~2.17.1:
   version "2.17.1"
-  resolved "https://unpm.uberinternal.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
   integrity sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==
 
 concat-map@0.0.1:
   version "0.0.1"
-  resolved "https://unpm.uberinternal.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
+  resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
 estree-walker@^0.5.2:
@@ -258,7 +258,7 @@ micromatch@^2.3.11:
 
 minimatch@^3.0.4:
   version "3.0.4"
-  resolved "https://unpm.uberinternal.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
   dependencies:
     brace-expansion "^1.1.7"
@@ -338,7 +338,7 @@ resolve@^1.8.1:
 
 rollup-plugin-alias@^1.5.1:
   version "1.5.1"
-  resolved "https://unpm.uberinternal.com/rollup-plugin-alias/-/rollup-plugin-alias-1.5.1.tgz#80cce3a967befda5b09c86abc14a043a78035b46"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-alias/-/rollup-plugin-alias-1.5.1.tgz#80cce3a967befda5b09c86abc14a043a78035b46"
   integrity sha512-pQTYBRNfLedoVOO7AYHNegIavEIp4jKTga5jUi1r//KYgHKGWgG4qJXYhbcWKt2k1FwGlR5wCYoY+IFkme0t4A==
   dependencies:
     slash "^2.0.0"
@@ -371,21 +371,21 @@ rollup-pluginutils@^2.3.3:
     micromatch "^2.3.11"
 
 rollup@^0.68.1:
-  version "0.68.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.68.1.tgz#40d03872d3b05848fb023b12ebf7c6d69cab84c5"
-  integrity sha512-8DNKos2p/B7gDoxI42kyIHHX8d+Zt+bwhjUgXnTqnSP+CSPkRNNIQyHIcTqeGdYWR70qG6c1DaRcrjWAiG6Akg==
+  version "0.68.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.68.2.tgz#c26afb5d981ca7a1a32f76087dbde9dad4fcc653"
+  integrity sha512-WgjNCXYv7ZbtStIap1+tz4pd2zwz0XYN//OILwEY6dINIFLVizK1iWdu+ZtUURL/OKnp8Lv2w8FBds8YihzX7Q==
   dependencies:
     "@types/estree" "0.0.39"
     "@types/node" "*"
 
 slash@^2.0.0:
   version "2.0.0"
-  resolved "https://unpm.uberinternal.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
+  resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
   integrity sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==
 
 source-map-support@~0.5.6:
   version "0.5.9"
-  resolved "https://unpm.uberinternal.com/source-map-support/-/source-map-support-0.5.9.tgz#41bc953b2534267ea2d605bccfa7bfa3111ced5f"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.9.tgz#41bc953b2534267ea2d605bccfa7bfa3111ced5f"
   integrity sha512-gR6Rw4MvUlYy83vP0vxoVNzM6t8MUXqNuRsuBmBHQDu1Fh6X015FrLdgoDKcNdkwGubozq0P4N0Q37UyFVr1EA==
   dependencies:
     buffer-from "^1.0.0"
@@ -393,7 +393,7 @@ source-map-support@~0.5.6:
 
 source-map@^0.6.0, source-map@~0.6.1:
   version "0.6.1"
-  resolved "https://unpm.uberinternal.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
 sourcemap-codec@^1.4.1:
@@ -403,7 +403,7 @@ sourcemap-codec@^1.4.1:
 
 terser@^3.13.1:
   version "3.13.1"
-  resolved "https://unpm.uberinternal.com/terser/-/terser-3.13.1.tgz#a02e8827fb9705fe7b609c31093d010b28cea8eb"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-3.13.1.tgz#a02e8827fb9705fe7b609c31093d010b28cea8eb"
   integrity sha512-ogyZye4DFqOtMzT92Y3Nxxw8OvXmL39HOALro4fc+EUYFFF9G/kk0znkvwMz6PPYgBtdKAodh3FPR70eugdaQA==
   dependencies:
     commander "~2.17.1"
