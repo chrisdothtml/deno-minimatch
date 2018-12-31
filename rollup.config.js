@@ -19,6 +19,6 @@ export default {
     cjs(),
     alias({
       path: path.resolve(__dirname, 'src/path.js')
-    }),
+    })
   ]
 }
