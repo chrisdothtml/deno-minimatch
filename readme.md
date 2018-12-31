@@ -16,12 +16,12 @@ minimatch('bar.foo', '*.foo')
 //> true
 ```
 
-# Contributing
+# Contribute
 
 ```sh
-# build dist file
-make build
+# generate build file
+yarn build
 
-# run tests
-make tests
+# test build file
+yarn test
 ```
