@@ -10,7 +10,7 @@ export default {
     format: 'esm'
   },
   external: [
-    'https://deno.land/x/path/index.ts'
+    'https://deno.land/x/fs/path/mod.ts'
   ],
   plugins: [
     resolve({
