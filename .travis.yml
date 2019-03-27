@@ -5,7 +5,7 @@ os:
 - osx
 
 install:
-- curl -L https://deno.land/x/install/install.py | python - v0.2.7
+- curl -fL https://deno.land/x/install/install.sh | sh
 - export PATH="$HOME/.deno/bin:$PATH"
 - yarn install --ignore-engines
 
