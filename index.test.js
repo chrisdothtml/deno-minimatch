@@ -1,4 +1,5 @@
-import { test, assertEqual } from 'https://deno.land/x/testing/mod.ts'
+import { runTests, test } from 'https://deno.land/x/testing/mod.ts'
+import { assertEquals } from 'https://deno.land/x/testing/asserts.ts'
 import minimatch from './index.js'
 
 test({
@@ -6,14 +7,16 @@ test({
   fn () {
     const mmInstance = new minimatch.Minimatch('*.js')
 
-    assertEqual(minimatch('bar.foo', '*.foo'), true)
-    assertEqual(minimatch('bar.foo', '*.+(bar|foo)'), true)
-    assertEqual(minimatch('bar.foo', '*.bar'), false)
-    assertEqual(
+    assertEquals(minimatch('bar.foo', '*.foo'), true)
+    assertEquals(minimatch('bar.foo', '*.+(bar|foo)'), true)
+    assertEquals(minimatch('bar.foo', '*.bar'), false)
+    assertEquals(
       ['foo.js', 'foo.txt'].filter(minimatch.filter('*.js')),
       ['foo.js']
     )
-    assertEqual(mmInstance.match('foo.js'), true)
-    assertEqual(mmInstance.makeRe() instanceof RegExp, true)
+    assertEquals(mmInstance.match('foo.js'), true)
+    assertEquals(mmInstance.makeRe() instanceof RegExp, true)
   }
 })
+
+runTests()
