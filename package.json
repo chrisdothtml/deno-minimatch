@@ -8,7 +8,7 @@
     "build": "rollup -c",
     "lint": "standard --verbose | snazzy",
     "pretest": "yarn build",
-    "test": "yarn lint && deno index.test.js"
+    "test": "yarn lint && deno run index.test.js"
   },
   "standard": {
     "ignore": [
