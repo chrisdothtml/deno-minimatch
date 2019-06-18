@@ -1,6 +1,6 @@
 # deno-minimatch
 
-[![StandardJS code style](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![chrisdothtml code style](https://img.shields.io/badge/code_style-chrisdothtml-brightgreen.svg)](https://github.com/chrisdothtml/eslint-config)
 [![travis-ci build status](https://api.travis-ci.org/chrisdothtml/deno-minimatch.svg?branch=master)](https://travis-ci.org/chrisdothtml/deno-minimatch)
 
 > A [deno](https://github.com/denoland/deno) port of [minimatch](https://github.com/isaacs/minimatch)

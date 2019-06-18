@@ -1,24 +1,22 @@
+import path from 'path'
 import alias from 'rollup-plugin-alias'
 import cjs from 'rollup-plugin-commonjs'
-import path from 'path'
 import resolve from 'rollup-plugin-node-resolve'
 
 export default {
   input: 'src/index.js',
   output: {
     file: 'index.js',
-    format: 'esm'
+    format: 'esm',
   },
-  external: [
-    'https://deno.land/x/fs/path/mod.ts'
-  ],
+  external: ['https://deno.land/x/fs/path/mod.ts'],
   plugins: [
     resolve({
-      preferBuiltins: false
+      preferBuiltins: false,
     }),
     cjs(),
     alias({
-      path: path.resolve(__dirname, 'src/path.js')
-    })
-  ]
+      path: path.resolve(__dirname, 'src/path.js'),
+    }),
+  ],
 }
