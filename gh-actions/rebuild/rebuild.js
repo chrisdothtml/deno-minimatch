@@ -20,39 +20,39 @@ function getChangedFiles() {
     .map((line) => line.slice(3))
 }
 
-if (
-  GITHUB_EVENT_NAME === 'push' &&
-  GITHUB_REF === 'refs/heads/master' &&
-  GITHUB_EVENT.commits[0].message !== COMMIT_MESSAGE
-) {
-  const remoteUrl = `https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git`
-  const branchName = GITHUB_REF.split('/')[2]
+// if (
+//   GITHUB_EVENT_NAME === 'push' &&
+//   GITHUB_REF === 'refs/heads/master' &&
+//   GITHUB_EVENT.commits[0].message !== COMMIT_MESSAGE
+// ) {
+const remoteUrl = `https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git`
+const branchName = GITHUB_REF.split('/')[2]
 
-  exec(`yarn && yarn build`)
-  if (getChangedFiles().includes('index.js')) {
-    exec(
-      [
-        // configure git
-        `git config user.email "${GITHUB_EVENT.head_commit.author.email}"`,
-        `git config user.name "${GITHUB_EVENT.head_commit.author.name}"`,
-        `git remote add gh-action ${remoteUrl}`,
-        `git fetch gh-action ${branchName}`,
-        `git branch --set-upstream-to gh-action/${branchName}`,
-        // push change
-        `git add index.js`,
-        `git commit -m "${COMMIT_MESSAGE}"`,
-        `git push`,
-      ].join(' && ')
-    )
+exec(`yarn && yarn build`)
+if (getChangedFiles().includes('index.js')) {
+  exec(
+    [
+      // configure git
+      `git config user.email "${GITHUB_EVENT.head_commit.author.email}"`,
+      `git config user.name "${GITHUB_EVENT.head_commit.author.name}"`,
+      `git remote add gh-action ${remoteUrl}`,
+      `git fetch gh-action ${branchName}`,
+      `git branch --set-upstream-to gh-action/${branchName}`,
+      // push change
+      `git add index.js`,
+      `git commit -m "${COMMIT_MESSAGE}"`,
+      `git push`,
+    ].join(' && ')
+  )
 
-    // success
-    process.exit(0)
-  } else {
-    console.log('Dist file not changed')
-  }
+  // success
+  process.exit(0)
 } else {
-  console.log('Skipping rebuild')
+  console.log('Dist file not changed')
 }
+// } else {
+//   console.log('Skipping rebuild')
+// }
 
 // neutral
 process.exit(78)
