@@ -9,7 +9,7 @@ export default {
     file: 'index.js',
     format: 'esm',
   },
-  external: ['https://deno.land/x/fs/path/mod.ts'],
+  external: ['https://deno.land/std/fs/path/mod.ts'],
   plugins: [
     resolve({
       preferBuiltins: false,
