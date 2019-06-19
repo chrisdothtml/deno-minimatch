@@ -9,4 +9,4 @@ WORKDIR /
 COPY . /
 RUN yarn
 
-ENTRYPOINT ["node", "rebuild.js"]
+ENTRYPOINT ["node", "/rebuild.js"]
