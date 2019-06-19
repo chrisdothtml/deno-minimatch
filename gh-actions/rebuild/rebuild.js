@@ -17,7 +17,7 @@ function exec(cmd) {
 console.log('cwd')
 console.log(process.cwd())
 console.log('readdir')
-console.log(require('fs').readdirSync)
+console.log(require('fs').readdirSync())
 process.exit(78)
 
 function getChangedFiles() {
