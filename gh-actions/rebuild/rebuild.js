@@ -19,7 +19,12 @@ function getChangedFiles() {
     .map((line) => line.slice(3))
 }
 
-if (GITHUB_EVENT_NAME === 'push' && GITHUB_REF === 'refs/heads/master') {
+if (
+  GITHUB_EVENT_NAME === 'push' &&
+  // deleting a branch triggers a `push` event; ignore these
+  GITHUB_EVENT.head_commit &&
+  GITHUB_REF === 'refs/heads/master'
+) {
   const remoteUrl = `https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git`
   const branchName = GITHUB_REF.split('/')[2]
 
