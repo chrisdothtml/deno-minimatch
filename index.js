@@ -1,4 +1,4 @@
-import * as path from 'https://deno.land/x/fs/path/mod.ts';
+import * as path from 'https://deno.land/std/fs/path/mod.ts';
 
 var concatMap = function (xs, fn) {
     var res = [];
