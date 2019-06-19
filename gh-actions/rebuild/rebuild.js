@@ -14,6 +14,12 @@ function exec(cmd) {
   return execSync(cmd, { encoding: 'utf-8' }).replace(/\n$/, '')
 }
 
+console.log('cwd')
+console.log(process.cwd())
+console.log('readdir')
+console.log(require('fs').readdirSync)
+process.exit(78)
+
 function getChangedFiles() {
   return exec(`git status --porcelain`)
     .split('\n')
