@@ -8,7 +8,6 @@ const {
 
 const { execSync } = require('child_process')
 const GITHUB_EVENT = require(GITHUB_EVENT_PATH)
-const COMMIT_MESSAGE = '[gh-actions/rebuild] Rebuild index.js'
 
 function exec(cmd) {
   return execSync(cmd, { encoding: 'utf-8' }).replace(/\n$/, '')
@@ -20,11 +19,7 @@ function getChangedFiles() {
     .map((line) => line.slice(3))
 }
 
-if (
-  GITHUB_EVENT_NAME === 'push' &&
-  GITHUB_REF === 'refs/heads/master' &&
-  GITHUB_EVENT.commits[0].message !== COMMIT_MESSAGE
-) {
+if (GITHUB_EVENT_NAME === 'push' && GITHUB_REF === 'refs/heads/master') {
   const remoteUrl = `https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git`
   const branchName = GITHUB_REF.split('/')[2]
 
@@ -40,7 +35,7 @@ if (
         `git branch --set-upstream-to gh-action/${branchName}`,
         // push change
         `git add index.js`,
-        `git commit -m "${COMMIT_MESSAGE}"`,
+        `git commit -m "[gh-actions/rebuild] Rebuild index.js"`,
         `git push`,
       ].join(' && ')
     )
