@@ -1190,4 +1190,6 @@ function regExpEscape (s) {
   return s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
 }
 
+console.log('foo');
+
 export default minimatch_1;
