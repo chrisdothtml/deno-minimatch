@@ -25,3 +25,5 @@ yarn build
 # test build file
 yarn test
 ```
+
+No need to rebuild the dist file in pull requests as this is already handled by [a Github action](https://github.com/chrisdothtml/deno-minimatch/tree/master/gh-actions/rebuild).
