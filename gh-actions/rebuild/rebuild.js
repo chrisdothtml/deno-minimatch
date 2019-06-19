@@ -14,12 +14,6 @@ function exec(cmd) {
   return execSync(cmd, { encoding: 'utf-8' }).replace(/\n$/, '')
 }
 
-console.log('cwd')
-console.log(process.cwd())
-console.log('readdir')
-console.log(require('fs').readdirSync('.'))
-process.exit(78)
-
 function getChangedFiles() {
   return exec(`git status --porcelain`)
     .split('\n')
@@ -34,7 +28,7 @@ function getChangedFiles() {
 const remoteUrl = `https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git`
 const branchName = GITHUB_REF.split('/')[2]
 
-exec(`yarn build`)
+exec(`yarn && yarn build`)
 if (getChangedFiles().includes('index.js')) {
   exec(
     [
@@ -53,6 +47,8 @@ if (getChangedFiles().includes('index.js')) {
 
   // success
   process.exit(0)
+} else {
+  console.log('file not changed')
 }
 // }
 
