@@ -1,2 +1,2 @@
-import * as path from 'https://deno.land/std/fs/path/mod.ts'
+import * as path from 'https://deno.land/std/path/mod.ts'
 export default path
