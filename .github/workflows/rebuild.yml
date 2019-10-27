@@ -1,0 +1,26 @@
+name: Rebuild dist file
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: install
+      run: |
+        yarn policies set-version
+        yarn install --frozen-lockfile
+    - name: rebuild
+      run: |
+        node gh-actions/rebuild.js
+      env:
+        AUTHOR_EMAIL: ${{ github.event.head_commit.author.email }}
+        AUTHOR_NAME: ${{ github.event.head_commit.author.name }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REF: ${{ github.ref }}
+        REPO: ${{ github.repository }}
