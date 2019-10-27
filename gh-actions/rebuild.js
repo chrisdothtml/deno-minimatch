@@ -36,12 +36,6 @@ if (getChangedFiles().includes('index.js')) {
       `git push`,
     ].join(' && ')
   )
-
-  // success
-  process.exit(0)
 } else {
   console.log('Dist file not changed')
 }
-
-// neutral
-process.exit(78)
