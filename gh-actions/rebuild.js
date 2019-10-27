@@ -1,10 +1,4 @@
-const {
-  AUTHOR_EMAIL,
-  AUTHOR_NAME,
-  GITHUB_TOKEN,
-  REF,
-  REPO,
-} = process.env
+const { AUTHOR_EMAIL, AUTHOR_NAME, GITHUB_TOKEN, REF, REPO } = process.env
 
 const { execSync } = require('child_process')
 const remoteUrl = `https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git`
