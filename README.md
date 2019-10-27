@@ -26,4 +26,4 @@ yarn build
 yarn test
 ```
 
-No need to rebuild the dist file in pull requests as this is already handled by [a Github action](https://github.com/chrisdothtml/deno-minimatch/tree/master/gh-actions/rebuild).
+No need to rebuild the dist file in pull requests as this is already handled by [a Github action](https://github.com/chrisdothtml/deno-minimatch/blob/master/.github/workflows/rebuild.yml).
