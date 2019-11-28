@@ -10,5 +10,5 @@ install:
 - yarn install --ignore-engines
 
 script:
-- deno version
+- deno --version
 - yarn test
