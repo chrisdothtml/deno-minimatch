@@ -1,8 +1,9 @@
-import { runTests, test } from 'https://deno.land/std/testing/mod.ts'
+/* global Deno */
+
 import { assertEquals } from 'https://deno.land/std/testing/asserts.ts'
 import minimatch from './index.js'
 
-test({
+Deno.test({
   name: 'minimatch',
   fn() {
     const mmInstance = new minimatch.Minimatch('*.js')
@@ -18,4 +19,4 @@ test({
   },
 })
 
-runTests()
+Deno.runTests()
