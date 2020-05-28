@@ -18,5 +18,3 @@ Deno.test({
     assertEquals(mmInstance.makeRe() instanceof RegExp, true)
   },
 })
-
-Deno.runTests()
